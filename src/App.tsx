@@ -1,12 +1,12 @@
 import "./App.scss";
-import { Header } from "./component/Header/Header";
-import { Content } from "./component/Content/Content";
+import { Header, Content, Footer } from "./component";
 
 function App() {
   return (
     <>
       <Header />
       <Content />
+      <Footer />
     </>
   );
 }
