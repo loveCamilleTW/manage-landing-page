@@ -10,7 +10,7 @@ interface SocialMedia {
   url: string;
 }
 
-export function Footer() {
+export function ManageFooter() {
   const NAV_ITEMS = [
     "Home",
     "Pricing",

@@ -1,7 +1,7 @@
 import CustomerReview from "./CustomerReview";
 import { Intro } from "./Intro";
 
-export function Content() {
+export function ManageContent() {
   return (
     <main>
       <Intro />
