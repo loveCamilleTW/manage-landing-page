@@ -1,6 +1,6 @@
-import './App.scss'
-import { Header } from './component/Header/Header';
-import { Content } from './component/Content/Content';
+import "./App.scss";
+import { Header } from "./component/Header/Header";
+import { Content } from "./component/Content/Content";
 
 function App() {
   return (
@@ -8,8 +8,7 @@ function App() {
       <Header />
       <Content />
     </>
-  )
+  );
 }
 
-
-export default App
+export default App;
