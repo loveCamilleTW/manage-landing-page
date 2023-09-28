@@ -1,4 +1,4 @@
-import INTRO_SVG from "../../images/illustration-intro.svg";
+import INTRO_SVG from "@images/illustration-intro.svg";
 
 interface Feature {
   id: string;

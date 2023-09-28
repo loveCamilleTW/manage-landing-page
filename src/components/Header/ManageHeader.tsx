@@ -1,9 +1,11 @@
-import { useState } from "react";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { useState, useRef } from "react";
+import useWindowDimensions from "@hooks/useWindowDimensions";
 
-import LogoSVG from "../../images/logo.svg";
-import HamburgerSVG from "../../images/icon-hamburger.svg";
-import CloseSVG from "../../images/icon-close.svg";
+import LogoSVG from "@images/logo.svg";
+import HamburgerSVG from "@images/icon-hamburger.svg";
+import CloseSVG from "@images/icon-close.svg";
+
+import "./ManageHeader.scss";
 
 export function ManageHeader() {
   const { width, height: _height } = useWindowDimensions();
@@ -42,20 +44,32 @@ function Navigation() {
 
 function NavigationMobile() {
   const [isOpened, setIsOpened] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
   const NAV_ITEMS = ["Pricing", "Product", "About Us", "Careers", "Community"];
+
+  const handleButtonClick = () => {
+    if (!dialogRef.current) return;
+
+    if (!isOpened) {
+      dialogRef.current.show();
+      setIsOpened(true);
+    } else {
+      dialogRef.current.close();
+      setIsOpened(false);
+    }
+  };
 
   return (
     <>
       <Logo />
       <img
         src={!isOpened ? HamburgerSVG : CloseSVG}
-        onClick={() => {
-          setIsOpened(!isOpened);
-        }}
+        onClick={handleButtonClick}
       />
 
-      <dialog open={isOpened}>
-        <nav>
+      <dialog ref={dialogRef}>
+        <nav className="header-nav">
           <ul>
             {NAV_ITEMS.map((id) => (
               <li key={id}>

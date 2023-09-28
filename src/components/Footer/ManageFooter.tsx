@@ -1,8 +1,8 @@
-import FACEBOOK_SVG from "../../images/icon-facebook.svg";
-import INSTAGRAM_SVG from "../../images/icon-instagram.svg";
-import PINTEREST_SVG from "../../images/icon-pinterest.svg";
-import TWITTER_SVG from "../../images/icon-twitter.svg";
-import YOUTUBE_SVG from "../../images/icon-youtube.svg";
+import FACEBOOK_SVG from "@images/icon-facebook.svg";
+import INSTAGRAM_SVG from "@images/icon-instagram.svg";
+import PINTEREST_SVG from "@images/icon-pinterest.svg";
+import TWITTER_SVG from "@images/icon-twitter.svg";
+import YOUTUBE_SVG from "@images/icon-youtube.svg";
 
 interface SocialMedia {
   imgSrc: string;
